@@ -5,3 +5,6 @@ An interactive site to discover anime, sign up to begin discovering series based
 <!-- As a user I want to make an account to discover and track anime
 As a user I want to search anime by category and save titles to my 'Watchlist'
 As a user I want to remove saved titles after I complete a series -->
+
+<!-- CSV to JSON -->
+<!-- CSV to SQL -->
