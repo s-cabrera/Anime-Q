@@ -1,0 +1,27 @@
+body {
+    background-color: rgb(58, 59, 59);
+    color: white;
+}
+
+.center-div {
+    padding-top: 10%;
+}
+
+.title {}
+
+.form-group1 {
+    margin-bottom: 5%;
+}
+
+.btn.btn-success {
+    padding: .4em 2em;
+    margin-top: 5%;
+}
+
+form {
+    padding: 0 3em;
+}
+
+#login .title>span {
+    font-size: .8em;
+}

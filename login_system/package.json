@@ -1,0 +1,45 @@
+{
+    "name": "phase2_project",
+    "version": "1.0.0",
+    "description": "Anime-Q",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "nodemon server.js",
+        "seed": "node seeds/seed.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "bcrypt": "^5.0.0",
+        "body": "^5.1.0",
+        "connect-session-sequelize": "^7.0.4",
+        "csv-sql": "^0.0.10",
+        "csv-to-sql-script": "^1.0.0",
+        "csvtojson": "^2.0.10",
+        "dotenv": "^8.2.0",
+        "ejs": "^3.1.6",
+        "express": "^4.17.1",
+        "express-handlebars": "^5.2.0",
+        "express-session": "^1.17.2",
+        "mysql2": "^2.2.5",
+        "nodemon": "^2.0.12",
+        "parser": "^0.1.4",
+        "sequelize": "^6.3.5",
+        "uuid": "^8.3.2"
+    },
+    "devDependencies": {
+        "eslint": "^7.32.0",
+        "eslint-config-prettier": "^6.15.0",
+        "prettier": "^2.1.2"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/s-cabrera/Phase2_Project.git"
+    },
+    "bugs": {
+        "url": "https://github.com/s-cabrera/Phase2_Project/issues"
+    },
+    "homepage": "https://github.com/s-cabrera/Phase2_Project#readme"
+}
