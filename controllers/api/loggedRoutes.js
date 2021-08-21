@@ -1,8 +1,8 @@
 const router = require('express').Router();
 //-- add routes to watchlist and user once logged in and authentication path--//
 const { Watch, User } = require('');
-const { Anime_500 } = require('../models');
-const withAuth = require('../utils/auth');
+const { Anime_500 } = require('../../models');
+const withAuth = require('../../utils/auth');
 
 router.get('/', async (req, res) => {
     try {
