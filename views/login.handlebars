@@ -1,18 +1,25 @@
-<h2>Login</h2>
+<div class="text-center center-div">
+        <h1>Anime-Q</h1>
+    </div>
 
-<form class="form login-form">
-  <div class="form-group">
-    <label for="email-login">email:</label>
-    <input class="form-input" type="text" id="email-login" />
-  </div>
-  <div class="form-group">
-    <label for="password-login">password:</label>
-    <input class="form-input" type="password" id="password-login" />
-  </div>
-  <div class="form-group">
-    <button class="btn btn-primary" type="submit">login</button>
-  </div>
-</form>
+    <div class="text-center center-div" id="login">
+        <div class="container w-25 border py-5">
+            <div class="title pb-5">
+                <h2 class="font-weight-bold">Login System</h2>
+                <span> Log in for existing users</span>
+            </div>
+            <form action="#">
+                <div class="form-group1">
+                    <input type="email" class="form-control" placeholder="email" name="email">
+                    <small class="form-text text-muted text-left">Register email address</small>
+                </div>
+                <div class="form-group2">
+                    <input type="password" class="form-control" name="password" placeholder="password">
+                </div>
+                <button type="submit" class="btn btn-success rounded-pill">Submit</button>
+            </form>
+        </div>
+    </div>
 
 {{!-- Change the source!! --}}
 {{!-- <script src="/js/login.js"></script> --}}
