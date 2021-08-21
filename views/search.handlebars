@@ -10,15 +10,20 @@
     <table class="table table-striped">
         {{#each animes as |anime|}}
         <tr>
-            <th>{{anime.title}}</th>
-            <th>Ranking</th>
-            <th>Genre</th>
             <th>
-                <button type="button" class="btn btn-secondary">Add</button>
+                <img src="{{anime.image_url}}" class="img-fluid" alt="{{anime.title}}">
+            </th>
+            <th>{{anime.title}}</th>
+            <th>{{anime.rating}}</th>
+            <th>{{anime.genre}}</th>
+            <th>
+                <button type="button" class="btn btn-secondary btn-lg">Add</button>
             </th>
         </tr>
         {{/each}}
         
     </table>
+
+    <script src=""></script>
 
 </form>
