@@ -4,15 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Title</title>
-    {{!-- add source --}}
+    <title>Anime-Q</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-    <link rel="" href="">
+    <link rel="stylesheet" href="/public/css/style.css">
 </head>
 
 <body>
-    {{{body}}}
-    
+    <header>
+        <h1>Anime-Q</h1>
+        {{#if logged_in}}
+        <nav>
+            <button class="btn" id="logout">logout</button>
+        </nav>
+        {{/if}}
+    </header>
+
+    <main>
+        {{{ body }}}
+    </main>
+
+
+    {{#if logged_in}}
+    <script src="/public/logout.js"></script>
+    {{/if}}
 </body>
+
 
 </html>
