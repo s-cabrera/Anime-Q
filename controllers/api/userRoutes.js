@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { User } = require('../../models');
 
+//Sign Up Button Click first_name, last_name, email, hased(password)
 router.post('/', async (req, res) => {
 	try {
 		const userData = await User.create(req.body);
