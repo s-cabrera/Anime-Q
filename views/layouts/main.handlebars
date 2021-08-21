@@ -4,13 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Title</title>
-    {{!-- add source --}}
-    <link rel="" href="">
+    <title>Anime-Q</title>
+    <link rel="stylesheet" href="/public/css/style.css">
 </head>
 
 <body>
-    
+    <header>
+        <h1>Anime-Q</h1>
+        {{#if logged_in}}
+        <nav>
+            <button class="btn" id="logout">logout</button>
+        </nav>
+        {{/if}}
+    </header>
+
+    <main>
+        {{{ body }}}
+    </main>
+
+
+    {{#if logged_in}}
+    <script src="/public/logout.js"></script>
+    {{/if}}
 </body>
 
 </html>
