@@ -9,9 +9,12 @@
     <table class="table table-striped">
         {{#each animes as |anime|}}
         <tr>
-            <th>Ranking</th>
+            <th>
+                <img src="{{anime.image_url}}" class="img-fluid" alt="{{anime.title}}">
+            </th>
             <th>{{anime.title}}</th>
-            <th>Genre</th>
+            <th>{{anime.rating}}</th>
+            <th>{{anime.genre}}</th>
         </tr>
         {{/each}}
         
