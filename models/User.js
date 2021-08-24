@@ -34,7 +34,7 @@ User.init(
 			allowNull:false,
 		},
 		watchlist: {
-			type: DataTypes.ARRAY(DataTypes.INTEGER),
+			type: DataTypes.STRING,
 			allowNull: true,
 		},
 	},
@@ -52,7 +52,7 @@ User.init(
 		sequelize,
 		freezeTableName: true,
 		underscored: true,
-		modelName: 'user',
+		modelName: 'User',
 	}
 );
 
