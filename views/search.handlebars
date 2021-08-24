@@ -3,27 +3,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anime-Q</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-    <link rel="stylesheet" href="/public/css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
-<form>
-    <table class="table table-striped">
-        {{#each animes as |anime|}}
-        <tr>
-            <th>
-                <img src="{{anime.image_url}}" class="img-fluid" alt="{{anime.title}}">
-            </th>
-            <th>{{anime.title}}</th>
-            <th>{{anime.rating}}</th>
-            <th>{{anime.genre}}</th>
-            <th>
-                <button type="button" class="btn btn-secondary btn-lg">Add</button>
-            </th>
-        </tr>
-        {{/each}}
-        
-    </table>
+<div class="container">
+    {{#each animes as |anime|}}
+    <div class="row">
+        <div class="card col" style="width: 18rem;">
+            <img src="{{anime.image_url}}" class="card-img-top" alt="{{anime.title}}">
+            <div class="card-body">
+                <h4 class="card-title">{{anime.title}}</h4>
+                <p class="card-text">{{anime.rating}}</p>
+                <p class="card-text">{{anime.genre}}</p>
+                <a href="#" class="btn btn-primary">Add to Watchlist</a>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>
 
-    <script src=""></script>
-
-</form>
+<script src=""></script>
