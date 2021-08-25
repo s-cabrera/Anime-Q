@@ -1,33 +1,47 @@
 <div id="sign-up-container" class="container w-25 border py-5">
-  <h2>Sign Up</h2>
+  <h2 class="font-weight-bold">Sign Up</h2>
 
-  <form class="form signup-form">
-    <div class="signup-form-group">
-      <label for="name-signup">First Name:</label>
-      <input class="form-input" type="text" id="first-name-signup" />
+  <form action='#' class="form">
+    <div class='form-group1'>
+      <input
+        type='text'
+        class='form-control'
+        placeholder='First Name'
+        name='first name'
+      />
     </div>
-    <div class="signup-form-group">
-      <label for="name-signup">Last Name:</label>
-      <input class="form-input" type="text" id="last-name-signup" />
+    <div class='form-group1'>
+      <input
+        type='text'
+        class='form-control'
+        placeholder='Last Name'
+        name='last name'
+      />
     </div>
-    <div class="signup-form-group">
-      <label for="email-signup">Email:</label>
-      <input class="form-input" type="text" id="email-signup" />
+    <div class='form-group1'>
+      <input
+        type='email'
+        class='form-control'
+        placeholder='Email'
+        name='email'
+      />
     </div>
-    <div class="signup-form-group">
-      <label for="password-signup">Password:</label>
-      <input class="form-input" type="password" id="password-signup" />
+    <div class='form-group1'>
+      <input
+        type='password'
+        class='form-control'
+        name='password'
+        placeholder='Password'
+      />
     </div>
-
- 
-    <div>
-      <div id="missing-fields" class="alert alert-danger d-none" role="alert"></div>
+    <div class='invisible alert-container'>
+      <div id='missing-alert' class='alert alert-danger' role='alert'>
+         Missing Field
+      </div>
     </div>
-
-    <div class="form-group">
-      <button class="btn btn-primary" type="submit">Submit</button>
-    </div>
+    <button type='submit' class='btn btn-success rounded-pill'>Submit</button>
   </form>
+
 </div>
 
 
