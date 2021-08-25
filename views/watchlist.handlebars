@@ -1,7 +1,17 @@
-{{#each animes as |anime|}}
-<div class="row mb-4">
-    <h>
-    {{anime.title}}
-    </h>
+<div class="container">
+    {{#each animes as |anime|}}
+    <div class="row">
+        <div class="card col" style="width: 18rem;">
+            <img src="{{anime.image_url}}" class="card-img-top" alt="{{anime.title}}">
+            <div class="card-body">
+                <h4 class="card-title">{{anime.title}}</h4>
+                <p class="card-text">{{anime.rating}}</p>
+                <p class="card-text">{{anime.genre}}</p>
+                <a href="#" class="btn btn-primary">Delete</a>
+            </div>
+        </div>
+    </div>
+    {{/each}}
 </div>
-{{/each}}
+
+<script src=""></script>

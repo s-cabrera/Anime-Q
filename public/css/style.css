@@ -1,6 +1,11 @@
 body {
-    background-color: rgb(58, 59, 59);
+    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
     color: white;
+    min-height: 1330px;
+}
+
+.navbar {
+    justify-content: center;
 }
 
 .center-div {
@@ -8,7 +13,13 @@ body {
 }
 
 #login-container {
-    background-color: #1e002c;
+    background-color: #330867;
+    justify-content: center;
+}
+
+#sign-up-container {
+    background-color: #330867;
+    justify-content: center;
 }
 
 .form-group1 {
@@ -19,9 +30,14 @@ body {
     padding-bottom: 10px;
 }
 
-.btn.btn-success {
+.btn.btn-success1 {
     padding: .4em 2em;
     /* margin-top: 5%; */
+}
+
+.btn.btn-success2 {
+    padding: .4em 2em;
+    margin-top: 5%;
 }
 
 form {
@@ -39,8 +55,29 @@ form {
 .container {
     display: flex;
     flex-wrap: wrap;
+    margin-top: 3%;
+}
+
+.row {
+    margin: auto;
+    margin-top: inherit;
+}
+
+.card {
+    background-color: rgb(213, 213, 213);
+    border-color: rgb(255, 255, 255);
+}
+
+.card-img-top {
+    margin: auto;
 }
 
 .card-body {
     color: black;
+}
+
+.btn {
+    background-color: #b291c9;
+    border-color: #b291c9;
+    justify-content: center;
 }
