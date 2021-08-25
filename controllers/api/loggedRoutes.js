@@ -1,8 +1,7 @@
 /* eslint-disable no-unused-vars */
 const router = require('express').Router();
 //-- add routes to watchlist and user once logged in and authentication path--//
-const { Watch, User } = require('');
-const { Anime_500 } = require('../../models');
+const { Anime_500, User } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 router.get('/', withAuth, async (req, res) => {
@@ -27,15 +26,15 @@ router.get('/', withAuth, async (req, res) => {
 
 
 //Add anime item to the watchlist
-router.PUT('/user/watchlist/add', async (req, res) => {
-	//get watchlist
-	const anime_id = req.body.anime_id;
+// router.PUT('/user/watchlist/add', async (req, res) => {
+// 	//get watchlist
+// 	const anime_id = req.body.anime_id;
 
-});
+// });
 
-//Delete anime item from the watchlist
-router.PUT('/user/watchlist/delete', async (req, res) => {
+// //Delete anime item from the watchlist
+// router.PUT('/user/watchlist/delete', async (req, res) => {
 
-});
+// });
 
 module.exports = router;

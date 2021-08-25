@@ -36,6 +36,22 @@ const signupFormHandler = async (event) => {
 	}
 };
 
+const loginBtnHandler = async (event) => {
+	event.preventDefault();
+
+	try {
+		document.location.replace('/signup');
+	} catch (error) {
+		alert('Page not found');
+	}
+};
+
+//Signup submit Button
 document
 	.querySelector('.signup-form')
 	.addEventListener('submit', signupFormHandler);
+
+//Signup reroute to Login Button
+document
+	.querySelector('#login-btn')
+	.addEventListener('click', loginBtnHandler);

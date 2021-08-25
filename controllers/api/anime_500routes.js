@@ -8,7 +8,11 @@ router.get('/', async (req, res) => {
 		});
 		//console.log(animeData);
 		const animes = animeData.map((e) => e.get({ plain: true }));
-		res.render('search', {animes});
+		res.render('search', 
+			{
+				animes, 
+				logged_in: req.session.logged_in
+			});
 	} catch (err) {
 		res.status(400).json(err);
 	}
