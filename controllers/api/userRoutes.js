@@ -1,17 +1,29 @@
+/* eslint-disable no-unused-vars */
 const router = require('express').Router();
 const { User } = require('../../models');
 
+
 //Sign Up Button Click first_name, last_name, email, hased(password)
-router.post('/', async (req, res) => {
+router.post('/signup', async (req, res) => {
 	try {
-		const userData = await User.create(req.body);
+		//console.log(req.body);
 
-		req.session.save(() => {
-			req.session.user_id = userData.id;
-			req.session.logged_in = true;
+		//Check to see if email is already used
+		const userExists = await User.findOne({ where: { email: req.body.email } });
+		console.log(`userExists /n ${userExists}`);
+		if(!userExists){
+			const userData = await User.create(req.body);
 
-			res.status(200).json(userData);
-		});
+			req.session.save(() => {
+				req.session.user_id = userData.id;
+				req.session.logged_in = true;
+				res.status(200).json(userData);
+			});
+		}
+		else{
+			console.log('401 Error');
+			res.status(401).json('Email already in use');
+		}
 	} catch (err) {
 		res.status(400).json(err);
 	}
