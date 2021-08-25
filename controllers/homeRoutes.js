@@ -42,7 +42,7 @@ router.get('/watchlist', withAuth, async (req, res) => {
 
 router.get('/signup', async (req, res) => {
 	try{
-		res.render('signup');
+		res.render('SignUp');
 	}catch(err){
 		res.status(400).json(err);
 	}
