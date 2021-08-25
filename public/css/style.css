@@ -1,7 +1,4 @@
 body {
-    /* background-color: #050402; */
-    /* background: rgb(5,4,2);
-    background: linear-gradient(0deg, rgba(5,4,2,1) 0%, rgba(62,94,99,1) 86%); */
     background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
     color: white;
     min-height: 1330px;
@@ -16,6 +13,11 @@ body {
 }
 
 #login-container {
+    background-color: #330867;
+    justify-content: center;
+}
+
+#sign-up-container {
     background-color: #330867;
     justify-content: center;
 }
@@ -72,4 +74,5 @@ form {
 .btn {
     background-color: #b291c9;
     border-color: #b291c9;
+    justify-content: center;
 }
