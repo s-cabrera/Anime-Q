@@ -31,10 +31,11 @@ router.get('/login', async (req, res) => {
 
 router.get('/watchlist', withAuth, async (req, res) => {
 	try{
+		//console.log(`User ID: ${req.session.user_id}`);
 		res.render('watchlist',
-		{
-			logged_in: req.session.logged_in
-		});
+			{
+				logged_in: req.session.logged_in
+			});
 	}catch(err){
 		res.status(400).json(err);
 	}
@@ -42,7 +43,7 @@ router.get('/watchlist', withAuth, async (req, res) => {
 
 router.get('/signup', async (req, res) => {
 	try{
-		res.render('signup');
+		res.render('SignUp');
 	}catch(err){
 		res.status(400).json(err);
 	}

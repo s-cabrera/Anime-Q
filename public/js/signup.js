@@ -23,7 +23,7 @@ const signupFormHandler = async (event) => {
 		} else {
 			//console.log(`Error: ${response.status} ${response.statusText}`);
 			const data = await response.json();
-			console.log(`Data: ${data}`);
+			//console.log(`Data: ${data}`);
 			//replace this with alert
 			missingFields.textContent = data;
 			missingFields.classList.remove('d-none');

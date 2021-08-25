@@ -1,10 +1,15 @@
 const addAnimeHandler = async (event) => {
-	const animeId = event.target.id;
-	console.log(`Anime ID: ${animeId}`);
+	console.log(`event: ${event}`);
+	console.log(`event.target ${event.target}`);
+	console.log(`event.target.data ${event.target.title}`);
+	//console.log(``);
 
-	const response = await fetch('/api/users/signup', {
-		method: 'POST',
-		body: JSON.stringify(animeId),
+	const anime_id = {anime_id: event.target.title};
+
+	console.log(anime_id);
+	const response = await fetch('/api/watchlist/add/', {
+		method: 'PUT',
+		body: JSON.stringify(anime_id),
 		headers: { 'Content-Type': 'application/json' },
 	});
 
@@ -13,5 +18,5 @@ const addAnimeHandler = async (event) => {
 };
 
 document
-	.querySelector('.add')
+	.querySelector('.btn-add')
 	.addEventListener('click', addAnimeHandler);
