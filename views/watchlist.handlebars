@@ -1,13 +1,13 @@
 <div class="container">
-    {{#each animes as |anime|}}
+    {{#each watchlists as |watchlist|}}
     <div class="row">
         <div class="card col" style="width: 18rem;">
-            <img src="{{anime.image_url}}" class="card-img-top" alt="{{anime.title}}">
+            <img src="{{watchlist.image_url}}" class="card-img-top" alt="{{watchlist.title}}">
             <div class="card-body">
-                <h4 class="card-title">{{anime.title}}</h4>
-                <p class="card-text">{{anime.rating}}</p>
-                <p class="card-text">{{anime.genre}}</p>
-                <button title="{{anime.id}}" class="btn btn-primary btn-add">Delete</button>
+                <h4 class="card-title">{{watchlist.title}}</h4>
+                <p class="card-text">{{watchlist.rating}}</p>
+                <p class="card-text">{{watchlist.genre}}</p>
+                <a href="#" title="{{watchlist.id}}" class="btn btn-primary btn-delete btn-lg" role="button">Delete</a>
             </div>
         </div>
     </div>

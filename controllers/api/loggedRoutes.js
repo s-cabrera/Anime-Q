@@ -1,5 +1,7 @@
 /* eslint-disable no-unused-vars */
 const router = require('express').Router();
+var Sequelize = require('sequelize');
+var Op = Sequelize.Op;
 //-- add routes to watchlist and user once logged in and authentication path--//
 const { Anime_500, User } = require('../../models');
 const { findOne } = require('../../models/Anime_500');
@@ -7,43 +9,36 @@ const withAuth = require('../../utils/auth');
 
 router.get('/', withAuth, async (req, res) => {
 	try {
-		console.log('In the get request!');
+
 		//Gets watchlist from User table
 		const userWatchlist = await User.findOne({
 			//Find the user with email thats logged in
 			attributes: ['watchlist'],
 			where: { id: req.session.user_id }
 		});
-		console.log(`userWatchlist = ${userWatchlist.watchlist}`);
+
 
 		const watchlistArray = JSON.parse(userWatchlist.watchlist);
 
 		//Error handling in case the list is empty (null)
-		console.log(`Parsed watch list ${watchlistArray}`);
-
-		// let watchlistString = '[ ';
-		// watchlistArray.forEach((e,i) => {
-		// 	if(i < watchlistArray.length){watchlistString += `${e},`;}
-		// 	else{watchlistString += `${e}]`;}
-		// });
 
 		if (watchlistArray.length > 0) {
+			var Op = Sequelize.Op;
 			const animeData = await Anime_500.findAll({
 				attributes: ['id', 'title', 'rating', 'genre', 'image_url'],
-				where: { id: {$in: [watchlistArray]} },
+				where: { id: {[Op.in]: watchlistArray} },
 			});
-
-			console.log(animeData);
-
-			const watchlist = animeData.map((anime) => anime.get({ plain: true }));
+			
+			const watchlists = animeData.map((anime) => anime.get({ plain: true }));
 
 			res.render('watchlist', {
-				watchlist,
+				watchlists,
 				logged_in: req.session.logged_in
 			});
 		}
-		else{
-			res.status(200).json('No animes in the watchlist');
+		else {
+			console.log('No animes in the watchlist');
+			res.status(400).json('No animes in the watchlist');
 		}
 	} catch (err) {
 		res.status(400).json(err);
@@ -65,26 +60,28 @@ router.put('/add', withAuth, async (req, res) => {
 
 		//Parse the watchlist into an array
 		let watchlist = await JSON.parse(user.watchlist);
+		console.log(`watchist ${watchlist}`);
 
-		if (!watchlist) { watchlist = Array(0); }
-		watchlist.push(anime_id);
+		if (!watchlist.includes(anime_id)) {
 
-		console.log(`Watchlist Array: ${watchlist}`);
+			if (!watchlist) { watchlist = Array(0); }
 
-		//user.watchlist = JSON.stringify(watchlist);
+			watchlist.push(anime_id);
 
-		//console.log(`user.watchlist ${user.watchlist}`);
+			const userAfter = await User.update(
+				{ watchlist: JSON.stringify(watchlist) },
+				{ where: { id: req.session.user_id } }
+			);
 
-		const userAfter = await User.update(
-			{watchlist: JSON.stringify(watchlist)},
-			{where: { id: req.session.user_id }}
-		);
+			// console.log(`User after new anime: ${userAfter}`);
 
-		console.log(`User after new anime: ${userAfter}`);
+			// console.log('Anime added');
 
-		console.log('Anime added');
-
-		res.status(200).json('Added the anime your watchlist');
+			res.status(200).json('Added the anime your watchlist');
+		}
+		else{
+			res.status(401).json('This anime is already on your Watchlist');
+		}
 
 	} catch (err) {
 		res.status(400).json(err);
