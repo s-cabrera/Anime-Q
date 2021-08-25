@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 const Sequelize = require('sequelize');
 require('dotenv').config();
 

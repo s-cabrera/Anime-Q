@@ -1,10 +1,10 @@
 <div class='text-center center-div' id='login'>
   <div id='login-container' class='container w-25 border py-5'>
     <div class='title pb-5'>
-      <h1 class='font-weight-bold'>Login System</h1>
-      <span> Log in for existing users</span>
+      <h1 class='font-weight-bold'>Login</h1>
+      <span> Please enter username and password. </span>
     </div>
-    <form action='#'>
+    <form class="login-form" action='#'>
       <div class='form-group1'>
         <input
           type='email'
@@ -21,12 +21,14 @@
           placeholder='Password'
         />
       </div>
-        <div class='invisible alert-container'>
-            <div id='missing-alert' class='alert alert-danger' role='alert'>
-                Login Failed: Missing username or password
-        </div>
+      <div class='alert-container'>
+        <div id='missing-alert' class='alert alert-danger d-none' role='alert'></div>
       </div>
+
       <button type='submit' class='btn btn-success rounded-pill'>Submit</button>
+
+      <button type='button' id="signup-btn" class='btn btn-success2 rounded-pill'>Sign Up</button>
+
     </form>
   </div>
 </div>
