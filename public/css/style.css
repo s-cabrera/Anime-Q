@@ -30,9 +30,14 @@ body {
     padding-bottom: 10px;
 }
 
-.btn.btn-success {
+.btn.btn-success1 {
     padding: .4em 2em;
     /* margin-top: 5%; */
+}
+
+.btn.btn-success2 {
+    padding: .4em 2em;
+    margin-top: 5%;
 }
 
 form {
