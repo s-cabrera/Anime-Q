@@ -26,18 +26,32 @@ body {
     padding-bottom: 10px;
 }
 
-.form-group2 {
-    padding-bottom: 10px;
+.form-group {
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
 }
 
-.btn.btn-success1 {
+.btn.btn-success {
+    display: flex;
     padding: .4em 2em;
-    /* margin-top: 5%; */
+    margin: auto;
+    margin-top: 5%;
+    color: black;
 }
 
 .btn.btn-success2 {
+    display: flex;
+    padding: .4em 2em;
+    margin: auto;
+    margin-top: 5%;
+}
+
+.btn.btn-success3 {
+    display: flex;
     padding: .4em 2em;
     margin-top: 5%;
+    margin: auto;
 }
 
 form {
@@ -79,5 +93,4 @@ form {
 .btn {
     background-color: #b291c9;
     border-color: #b291c9;
-    justify-content: center;
 }
