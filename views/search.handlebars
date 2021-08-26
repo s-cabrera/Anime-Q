@@ -1,7 +1,7 @@
 <div class="container">
     {{#each animes as |anime|}}
     <div class="row">
-        <div class="card col" style="width: 18rem;">
+        <div class="card col"  id="{{anime.id}}" style="width: 18rem;">
             <img src="{{anime.image_url}}" class="card-img-top" alt="{{anime.title}}">
             <div class="card-body">
                 <h4 class="card-title">{{anime.title}}</h4>
@@ -9,7 +9,7 @@
                 <p class="card-text">{{anime.genre}}</p>
                 
                 {{!-- {{#if logged_in}} --}}
-                <a href="#" title="{{anime.id}}" class="btn btn-primary btn-add btn-lg" role="button">Add to Watchlist</a>
+                <a href="#{{anime.id}}" title="{{anime.id}}" class="btn btn-primary btn-add btn-lg" role="button">Add to Watchlist</a>
                 {{!-- {{/if}} --}}
             </div>
         </div>
