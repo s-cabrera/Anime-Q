@@ -16,9 +16,9 @@ const loginFormHandler = async (event) => {
 			//!-- rename to make route to account profile once logged in--//
 			document.location.replace('/watchlist');
 		} else {
-			alert.textContent = 'Login Failed: Username or password is incorrect';
+			const data = await response.json();
+			alert.textContent = data.message;
 			alert.classList.remove('d-none');
-			alert(response.statusText);
 		}
 	}
 	else{

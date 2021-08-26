@@ -7,8 +7,9 @@
                 <h4 class="card-title">{{anime.title}}</h4>
                 <p class="card-text">{{anime.rating}}</p>
                 <p class="card-text">{{anime.genre}}</p>
+                
                 {{#if logged_in}}
-                <a href="#" class="btn btn-primary">Add to Watchlist</a>
+                <a href="#" title="{{anime.id}}" class="btn btn-primary btn-add btn-lg" role="button">Add to Watchlist</a>
                 {{/if}}
             </div>
         </div>
