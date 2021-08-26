@@ -39,6 +39,10 @@ router.get('/watchlist', withAuth, async (req, res) => {
 
 router.get('/signup', async (req, res) => {
 	try{
+		if (req.session.logged_in) {
+			res.redirect('/watchlist');
+			return;
+		}
 		res.render('SignUp', {
 			logged_in: req.session.logged_in
 		});
