@@ -97,10 +97,26 @@ form {
 
 .logout-btn{
     position: absolute;
-    right: 5%;
+    right: 2%;
 }
 
 #view-anime-btn{
     position: absolute;
-    left: 5%;
+    left: 2%;
+}
+
+
+#nav-watchlist-btn{   
+    position: absolute;
+    left: 10%;
+}
+
+#nav-login-btn{
+    position: absolute;
+    right: 9%;
+}
+
+#nav-signup-btn{
+    position: absolute;
+    right: 2%;
 }

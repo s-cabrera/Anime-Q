@@ -14,8 +14,13 @@
     <header>
         <nav class="navbar navbar-dark bg-dark">
             <h1 class="title">Anime-Q</h1>
-                 <a href="/api/anime/" class="btn" id="view-anime-btn">View Anime-Q list</a>
+                 <a href="/api/anime/" class="btn" id="view-anime-btn">Animelist</a>
+            {{#unless logged_in}}
+                 <a href="/login" class="btn" id="nav-login-btn">Login</a>
+                 <a href="/signup" class="btn" id="nav-signup-btn">Signup</a>
+            {{/unless}}
             {{#if logged_in}}
+                <a href="/watchlist" class="btn" id="nav-watchlist-btn">Watchlist</a>
                 <button class="btn logout-btn" id="logout">Logout</button>
             {{/if}}
         </nav>
