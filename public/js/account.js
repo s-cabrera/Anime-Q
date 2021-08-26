@@ -1,16 +1,4 @@
 console.log('Account.js reached from watchlist');
-// const getUserWatchlist = async() => {
-// 	try {
-// 		await fetch('/api/watchlist/', {
-// 			method: 'GET',
-// 			headers: {
-// 				'Content-Type': 'application/json',
-// 			},
-// 		});
-// 	} catch (error) {
-// 		alert(error);
-// 	}
-// };
 
 // const newFormHandler = async (event) => {
 // 	event.preventDefault();
@@ -59,6 +47,3 @@ console.log('Account.js reached from watchlist');
 // document
 // 	.querySelector('.project-list')
 // 	.addEventListener('click', delButtonHandler);
-  
-
-// getUserWatchlist();

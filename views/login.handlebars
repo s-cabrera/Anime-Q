@@ -1,15 +1,3 @@
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Anime-Q</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-  <link rel="stylesheet" href="/css/style.css">
-</head>
-{{!-- <div class='text-center center-div'>
-  <h1>Anime-Q</h1>
-</div> --}}
-
 <div class='text-center center-div' id='login'>
   <div id='login-container' class='container w-25 border py-5'>
     <div class='title pb-5'>
@@ -18,17 +6,26 @@
     </div>
     <form class="login-form" action='#'>
       <div class='form-group1'>
-        <input id='email-login' type='email' class='form-control' placeholder='email' name='email' />
-        {{!-- <small class='form-text text-muted text-left'>Register email address</small> --}}
+        <input
+          type='email'
+          class='form-control'
+          placeholder='Email'
+          name='email'
+        />
       </div>
-      <div class='form-group2'>
-        <input id='password-login' type='password' class='form-control' name='password' placeholder='password' />
+      <div class='form-group1'>
+        <input
+          type='password'
+          class='form-control'
+          name='password'
+          placeholder='Password'
+        />
       </div>
       <div class='alert-container'>
         <div id='missing-alert' class='alert alert-danger d-none' role='alert'></div>
       </div>
 
-      <button type='submit' class='btn btn-success1 rounded-pill'>Submit</button>
+      <button type='submit' class='btn btn-success rounded-pill'>Submit</button>
 
       <button type='button' id="signup-btn" class='btn btn-success2 rounded-pill'>Sign Up</button>
 
