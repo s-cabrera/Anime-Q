@@ -1,49 +1,30 @@
 console.log('Account.js reached from watchlist');
 
-// const newFormHandler = async (event) => {
-// 	event.preventDefault();
-  
-// 	const name = document.querySelector('#project-name').value.trim();
-// 	const needed_funding = document.querySelector('#project-funding').value.trim();
-// 	const description = document.querySelector('#project-desc').value.trim();
-  
-// 	if (name && needed_funding && description) {
-// 		const response = await fetch('/api/projects', {
-// 			method: 'POST',
-// 			body: JSON.stringify({ name, needed_funding, description }),
-// 			headers: {
-// 				'Content-Type': 'application/json',
-// 			},
-// 		});
-  
-// 		if (response.ok) {
-// 			document.location.replace('/profile');
-// 		} else {
-// 			alert('Failed to create project');
-// 		}
-// 	}
-// };
-  
-// const delButtonHandler = async (event) => {
-// 	if (event.target.hasAttribute('data-id')) {
-// 		const id = event.target.getAttribute('data-id');
-  
-// 		const response = await fetch(`/api/projects/${id}`, {
-// 			method: 'DELETE',
-// 		});
-  
-// 		if (response.ok) {
-// 			document.location.replace('/profile');
-// 		} else {
-// 			alert('Failed to delete project');
-// 		}
-// 	}
-// };
-  
-// document
-// 	.querySelector('.new-project-form')
-// 	.addEventListener('submit', newFormHandler);
-  
-// document
-// 	.querySelector('.project-list')
-// 	.addEventListener('click', delButtonHandler);
+const delButtonHandler = async (event) => {
+	try {
+		const anime_id = { anime_id: event.target.title };
+
+		console.log(anime_id);
+		const response = await fetch('/api/watchlist/delete/', {
+			method: 'PUT',
+			body: JSON.stringify(anime_id),
+			headers: { 'Content-Type': 'application/json' },
+		});
+
+		if (response.ok) {
+			console.log('Anime deleted from your watch list');
+			document.location.replace('/watchlist');
+		}
+		else if (response.status == '401') {
+			const message = await response.json();
+			console.log(message);
+		}
+
+	} catch (error) {
+		alert(error);
+	}
+};
+
+[...document.querySelectorAll('.btn-delete')].forEach(function (item) {
+	item.addEventListener('click', delButtonHandler);
+});
