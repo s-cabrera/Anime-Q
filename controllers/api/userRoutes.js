@@ -6,7 +6,7 @@ const { User } = require('../../models');
 //Sign Up Button Click first_name, last_name, email, hased(password)
 router.post('/signup', async (req, res) => {
 	try {
-		//console.log(req.body);
+		console.log(req.body);
 
 		//Check to see if email is already used
 		const userExists = await User.findOne({ where: { email: req.body.email } });

@@ -8,13 +8,15 @@
                 <p class="card-text">{{anime.rating}}</p>
                 <p class="card-text">{{anime.genre}}</p>
                 
-                {{#if logged_in}}
+                {{!-- {{#if logged_in}} --}}
                 <a href="#" title="{{anime.id}}" class="btn btn-primary btn-add btn-lg" role="button">Add to Watchlist</a>
-                {{/if}}
+                {{!-- {{/if}} --}}
             </div>
         </div>
     </div>
     {{/each}}
 </div>
 
-<script src="/js/search.js"></script>
+{{!-- {{#if logged_in}} --}}
+    <script src="/js/search.js"></script>
+{{!-- {{/if}} --}}

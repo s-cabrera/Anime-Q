@@ -10,8 +10,8 @@ router.get('/', async (req, res) => {
 		const animes = animeData.map((e) => e.get({ plain: true }));
 		res.render('search', 
 			{
-				animes, 
-				logged_in: req.session.logged_in
+				logged_in: req.session.logged_in,
+				animes 
 			});
 	} catch (err) {
 		res.status(400).json(err);

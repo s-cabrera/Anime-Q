@@ -94,3 +94,13 @@ form {
     background-color: #b291c9;
     border-color: #b291c9;
 }
+
+.logout-btn{
+    position: absolute;
+    right: 5%;
+}
+
+#view-anime-btn{
+    position: absolute;
+    left: 5%;
+}

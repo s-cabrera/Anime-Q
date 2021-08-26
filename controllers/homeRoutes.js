@@ -15,7 +15,7 @@ router.get('/login', async (req, res) => {
 	// If the user is already logged in, redirect the request to another route
 	try {
 		if (req.session.logged_in) {
-			res.redirect('watchlist');
+			res.redirect('/watchlist');
 			return;
 		}
 
@@ -39,7 +39,9 @@ router.get('/watchlist', withAuth, async (req, res) => {
 
 router.get('/signup', async (req, res) => {
 	try{
-		res.render('SignUp');
+		res.render('SignUp', {
+			logged_in: req.session.logged_in
+		});
 	}catch(err){
 		res.status(400).json(err);
 	}

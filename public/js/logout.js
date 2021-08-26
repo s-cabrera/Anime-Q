@@ -1,3 +1,4 @@
+console.log('Connected to logout.js');
 const logout = async () => {
 	//!-- add route to fetch call for logging out--//
 	const response = await fetch('/api/users/logout', {

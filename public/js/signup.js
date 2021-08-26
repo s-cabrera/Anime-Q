@@ -40,7 +40,7 @@ const loginBtnHandler = async (event) => {
 	event.preventDefault();
 
 	try {
-		document.location.replace('/signup');
+		document.location.replace('/login');
 	} catch (error) {
 		alert('Page not found');
 	}
@@ -53,5 +53,5 @@ document
 
 //Signup reroute to Login Button
 document
-	.querySelector('#login-btn')
+	.getElementById('login-btn')
 	.addEventListener('click', loginBtnHandler);
