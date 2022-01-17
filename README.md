@@ -3,6 +3,7 @@
 # Anime Q
 <!-- Deployed Website on Heroku -->
 <!-- https://anime-q-list.herokuapp.com/ -->
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 <details>
   <summary>Table of Contents</summary>
@@ -21,16 +22,15 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
     <li><a href="#disclaimer">Disclaimer</a></li>
+    <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
 
 ## About the Project
+
 [![Anime-Q Demo][demo]](https://anime-q-list.herokuapp.com/)
 
 An interactive site to discover anime, sign up to begin discovering series based off category and add them to a "watchlist" for later. Your information will be saved with your login. Once a series has been saved you can remove it afterwards and continue to discover and add more.
@@ -130,7 +130,7 @@ Don't forget to give the project a star! Thanks again!
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-## Acknowledements
+## Acknowledgments
 * [Kaggle](https://www.kaggle.com/azathoth42/myanimelist)
 * [Heroku](https://www.heroku.com/)
 
@@ -140,8 +140,14 @@ Don't forget to give the project a star! Thanks again!
 ## Disclaimer
 Adblock Chrome Extension may cause the application's page redirection to not work properly.
 
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## Contact
+If you have any questions about the repo, open an issue or contact me directly at stephanie.cabrera.333@gmail.com. You can find more of my work at my [Github](https://github.com/s-cabrera/).
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 <!-- MARKDOWN LINKS & IMAGES -->
 [demo]: Anime-Q.gif
 [jawsDB]: jawsDB.PNG
-  
   
