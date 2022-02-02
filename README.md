@@ -25,15 +25,20 @@
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
     <li><a href="#disclaimer">Disclaimer</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li>
+      <a href="#contact">Contact</a>
+      <ul>
+        <li><a href="#creators">Creators</a></li>
+      </ul>
+    </li>
   </ol>
 </details>
 
 ## About the Project
 
-[![Anime-Q Demo][demo]](https://anime-q-list.herokuapp.com/)
-
 An interactive site to discover anime, sign up to begin discovering series based off category and add them to a "watchlist" for later. Your information will be saved with your login. Once a series has been saved you can remove it afterwards and continue to discover and add more.
+
+[![Anime-Q Demo][demo]](https://anime-q-list.herokuapp.com/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -143,6 +148,14 @@ Adblock Chrome Extension may cause the application's page redirection to not wor
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Contact
+
+### Creators
+
+* [Esteban Rendon](https://github.com/tanookibruv)
+* [Abigail Aguilar](https://github.com/abigaila97)
+* [Kevin Martinez](https://github.com/kevinmartinez6069)
+* [Stephanie Cabrera](https://github.com/s-cabrera)
+
 If you have any questions about the repo, open an issue or contact me directly at stephanie.cabrera.333@gmail.com. You can find more of my work at my [Github](https://github.com/s-cabrera/).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
